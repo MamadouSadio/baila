@@ -1,0 +1,31 @@
+bailagenea.com, www.bailagenea.com {
+    root * /usr/share/caddy
+    encode gzip
+    
+    # Pour React Router - toutes les routes non-fichiers vont vers index.html
+    try_files {path} {path}/ /index.html
+    
+    # Servir les fichiers statiques
+    file_server
+    
+    # Headers de sécurité
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy strict-origin-when-cross-origin
+    }
+    
+    # Cache pour assets statiques
+    @static {
+        path *.js *.css *.png *.jpg *.jpeg *.gif *.svg *.ico *.woff* *.ttf
+    }
+    header @static Cache-Control "public, max-age=31536000"
+    
+    # Logs
+    log {
+        output stdout
+        format console
+        level INFO
+    }
+}
