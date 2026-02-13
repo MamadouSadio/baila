@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    @apply antialiased text-slate-800 bg-slate-50;
+  }
+  /* Focus visible pour accessibilité clavier */
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-none ring-2 ring-[#1A3B8A] ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Éviter que le contenu soit caché sous la nav fixe au scroll / skip link */
+#main,
+#mot-du-dg,
+#features,
+#arbre,
+#testimonials,
+#cta,
+#cgu {
+  scroll-margin-top: 4rem;
+}
