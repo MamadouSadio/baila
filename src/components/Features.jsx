@@ -1,7 +1,7 @@
 const features = [
   {
     title: 'Arbre généalogique',
-    description: 'Créez et visualisez votre arbre généalogique. Impression sur différents supports (papier, vinyle, bâche…) et dimensions (A0, A3, grands formats).',
+    description: 'Créez et visualisez votre arbre généalogique.',
     icon: '🌳',
   },
   {

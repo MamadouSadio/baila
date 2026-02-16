@@ -40,10 +40,10 @@ function SponsorCarousel() {
                 style={{ width: `${100 / SLIDE_COUNT}%` }}
               >
                 <span className="text-white/90 text-sm sm:text-base font-medium">
-                  Sponsor {i + 1}
+                  Partenaire {i + 1}
                 </span>
                 <span className="text-white/60 text-xs sm:text-sm ml-2 hidden sm:inline">
-                  (emplacement slide {i + 1})
+                  (emplacement partenaire {i + 1})
                 </span>
               </div>
             ))}

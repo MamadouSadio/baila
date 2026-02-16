@@ -1,4 +1,4 @@
-function Footer() {
+function Footer({ onOpenCGU }) {
   const year = new Date().getFullYear()
 
   return (
@@ -9,7 +9,7 @@ function Footer() {
             République du Sénégal — Un Peuple - Un but - Une Foi
           </p>
           <p className="text-slate-500 text-sm mt-0.5">
-            Ministère de la Famille et des Solidarités (MFS) · Direction de la Famille et de la Protection des Couches Vulnérables
+            Ministère.............
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-700/50">
@@ -29,7 +29,11 @@ function Footer() {
             <a href="#arbre" className="hover:text-white transition-colors">Arbre généalogique</a>
             <a href="#testimonials" className="hover:text-white transition-colors">Témoignages</a>
             <a href="#cta" className="hover:text-white transition-colors">Conditions d&apos;accès</a>
-            <a href="#cgu" className="hover:text-white transition-colors">CGU</a>
+            {onOpenCGU ? (
+              <button type="button" onClick={onOpenCGU} className="hover:text-white transition-colors bg-transparent border-none cursor-pointer text-sm font-normal text-inherit p-0">CGU</button>
+            ) : (
+              <span className="text-sm">CGU</span>
+            )}
           </nav>
         </div>
       </div>

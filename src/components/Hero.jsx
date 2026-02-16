@@ -6,17 +6,12 @@ function Hero() {
       {/* ========== Haut de bannière : Logo + Carousel sponsors (6 slides) ========== */}
       <div className="flex-shrink-0 w-full px-3 sm:px-6 lg:px-8 pt-14 sm:pt-16 pb-4 sm:pb-5 border-b border-white/15">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
-          {/* Espace réservé au logo */}
-          <div
-            className="logo-area flex-shrink-0 flex items-center justify-center w-32 h-14 sm:w-40 sm:h-16 lg:w-48 lg:h-20 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20"
-            aria-label="Emplacement du logo"
-          >
-            <span className="text-white/70 text-xs sm:text-sm text-center px-2">
-              Logo
-            </span>
-          </div>
+          {/* Logo Baïla Généa — conteneur portrait pour afficher le logo en entier */}
+          <a href="#" className="logo-area flex-shrink-0 flex items-center justify-center w-[120px] h-24 sm:w-[150px] sm:h-28 lg:w-[180px] lg:h-32 rounded-lg overflow-hidden border border-white/20 shadow-lg bg-white/5" aria-label="Baïla Généa - Accueil">
+            <img src="/logo.png" alt="Baïla Généa" className="max-w-full max-h-full object-contain" />
+          </a>
 
-          {/* Carousel 6 slides sponsors */}
+          {/* Carousel 6 slides partenaires */}
           <SponsorCarousel />
         </div>
       </div>
@@ -36,7 +31,7 @@ function Hero() {
             Un Peuple - Un but - Une Foi
           </p>
           <p className="text-blue-100/80 text-xs mt-0.5">
-            Ministère de la Famille et des Solidarités (MFS) · Direction de la Famille et de la Protection des Couches Vulnérables
+            Ministère.............
           </p>
         </div>
       </div>
@@ -47,11 +42,8 @@ function Hero() {
           <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-4 animate-slide-up text-balance">
             Baïla Généa
           </h1>
-          <p className="text-lg sm:text-xl text-blue-50/95 max-w-2xl mx-auto mb-4 animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:150ms]">
+          <p className="text-lg sm:text-xl text-blue-50/95 max-w-2xl mx-auto mb-8 sm:mb-10 animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:150ms]">
             Baïla Généa est un outil qui vous permet de créer votre arbre généalogique.
-          </p>
-          <p className="text-sm sm:text-base text-blue-100/90 max-w-xl mx-auto mb-8 sm:mb-10 animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:200ms]">
-            Possibilité d&apos;imprimer l&apos;arbre sur différents supports (papier, vinyle, bâche…) et sur différentes dimensions (A0, A3, grands formats).
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:300ms]">
             <a
