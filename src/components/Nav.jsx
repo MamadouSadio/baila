@@ -51,14 +51,14 @@ function Nav() {
 
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg sm:hidden focus:outline-none focus:ring-2 focus:ring-[#1A3B8A] focus:ring-offset-2"
+            className="flex h-10 w-10 flex-col items-center justify-center rounded-lg sm:hidden focus:outline-none focus:ring-2 focus:ring-[#1A3B8A] focus:ring-offset-2"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label="Menu"
           >
             <span className={`block h-0.5 w-6 rounded ${scrolled ? 'bg-slate-900' : 'bg-white'}`} />
-            <span className={`mt-1 block h-0.5 w-6 rounded ${scrolled ? 'bg-slate-900' : 'bg-white'}`} />
-            <span className={`mt-1 block h-0.5 w-6 rounded ${scrolled ? 'bg-slate-900' : 'bg-white'}`} />
+            <span className={`my-1 block h-0.5 w-6 rounded ${scrolled ? 'bg-slate-900' : 'bg-white'}`} />
+            <span className={`block h-0.5 w-6 rounded ${scrolled ? 'bg-slate-900' : 'bg-white'}`} />
           </button>
         </div>
 

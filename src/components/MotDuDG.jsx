@@ -4,7 +4,7 @@ function MotDuDG() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4">
-            Le Mot du DG
+            Mot de l&apos;Administrateur du Cabinet Sahel Focus Management
           </h2>
         </div>
 
@@ -14,15 +14,12 @@ function MotDuDG() {
             <div className="w-48 sm:w-56 lg:w-64 aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
               <img
                 src="/dg-photo.png"
-                alt="Directeur Général - Cabinet Sahel Focus Management"
+                alt="Administrateur du Cabinet Sahel Focus Management"
                 className="w-full h-full object-cover"
               />
             </div>
             <p className="text-center text-sm text-slate-600 mt-4 font-medium">
-              Directeur Général
-            </p>
-            <p className="text-center text-sm text-slate-500">
-              Cabinet Sahel Focus Management
+              Administrateur du Cabinet Sahel Focus Management
             </p>
           </div>
 

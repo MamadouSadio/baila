@@ -27,7 +27,8 @@ function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-blue-100/90 text-xs sm:text-sm">
             <span className="font-semibold text-green-300">République du Sénégal</span>
-            {' — '}
+          </p>
+          <p className="text-blue-100/90 text-[11px] sm:text-xs mt-0.5">
             Un Peuple - Un but - Une Foi
           </p>
           <p className="text-blue-100/80 text-xs mt-0.5">

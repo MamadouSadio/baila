@@ -6,7 +6,7 @@ const features = [
   },
   {
     title: 'Recherche par localité',
-    description: 'Recherchez des parents dans une localité quelconque, partout au Sénégal (régions, départements, communes).',
+    description: 'Recherchez des parents dans une localité quelconque, partout dans le monde (régions, départements, communes).',
     icon: '📍',
   },
   {
