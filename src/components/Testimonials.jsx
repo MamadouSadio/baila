@@ -1,3 +1,5 @@
+import { useLanguage } from '../LanguageContext'
+
 const testimonials = [
   {
     id: 1,
@@ -45,6 +47,7 @@ function PhotoPlaceholder({ size = 'md' }) {
 }
 
 function TestimonialCard({ testimonial }) {
+  const { lang } = useLanguage()
   const { name, title, photo } = testimonial
   return (
     <article className="group flex flex-col items-center text-center p-6 rounded-2xl bg-white border-2 border-slate-200 hover:border-[#1A3B8A] hover:shadow-lg transition-all duration-300">
@@ -70,22 +73,27 @@ function TestimonialCard({ testimonial }) {
             <path d="M8 5v14l11-7z" />
           </svg>
         </span>
-        <span>Vidéo du témoignage à venir</span>
+        <span>
+          {lang === 'fr' ? 'Vidéo du témoignage à venir' : 'Testimonial video coming soon'}
+        </span>
       </div>
     </article>
   )
 }
 
 function Testimonials() {
+  const { lang } = useLanguage()
   return (
     <section id="testimonials" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4">
-            Témoignages
+            {lang === 'fr' ? 'Témoignages' : 'Testimonials'}
           </h2>
           <p className="text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto">
-            Les vidéos de témoignages des familles utilisatrices de Baïla Généa seront bientôt disponibles.
+            {lang === 'fr'
+              ? 'Les vidéos de témoignages des familles utilisatrices de Baïla Généa seront bientôt disponibles.'
+              : 'Video testimonials from families using Baïla Généa will be available soon.'}
           </p>
         </div>
 

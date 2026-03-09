@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
-const SLIDE_COUNT = 6
-const AUTO_PLAY_MS = 4000
+const SLIDE_COUNT = 10
+const AUTO_PLAY_MS = 12000
 
 function SponsorCarousel() {
   const [current, setCurrent] = useState(0)

@@ -1,4 +1,6 @@
-const features = [
+import { useLanguage } from '../LanguageContext'
+
+const featuresFr = [
   {
     title: 'Arbre généalogique',
     description: 'Créez et visualisez votre arbre généalogique.',
@@ -26,21 +28,66 @@ const features = [
   },
   {
     title: 'Cérémonies familiales',
-    description: 'Publiez et gérez les cérémonies familiales : ziar (date, lieu, comptabilité), tour de famille, mariage (mariés, parrain, marraine, belles-sœurs…), autres cérémonies.',
+    description:
+      'Publiez et gérez les cérémonies familiales : ziar (date, lieu, comptabilité), tour de famille, mariage (mariés, parrain, marraine, belles-sœurs…), autres cérémonies.',
+    icon: '🎉',
+  },
+]
+
+const featuresEn = [
+  {
+    title: 'Family tree',
+    description: 'Create and view your family tree.',
+    icon: '🌳',
+  },
+  {
+    title: 'Search by location',
+    description:
+      'Search for relatives in any location, anywhere in the world (regions, departments, municipalities).',
+    icon: '📍',
+  },
+  {
+    title: 'Family relationship',
+    description:
+      'Search for the relationship between any two family members and view the connections.',
+    icon: '🔗',
+  },
+  {
+    title: 'Professional skills',
+    description:
+      'Search for professional skills in the family (teaching, health, crafts, mechanics, construction, farming…).',
+    icon: '💼',
+  },
+  {
+    title: 'Family museum',
+    description:
+      'Keep a family museum showing images of symbolic objects belonging to the whole family or to a member.',
+    icon: '🏛️',
+  },
+  {
+    title: 'Family ceremonies',
+    description:
+      'Publish and manage family ceremonies: ziar (date, place, accounting), family gatherings, weddings and other events.',
     icon: '🎉',
   },
 ]
 
 function Features() {
+  const { lang } = useLanguage()
+  const features = lang === 'fr' ? featuresFr : featuresEn
   return (
     <section id="features" className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4">
-            Baïla Généa vous donne les possibilités suivantes
+            {lang === 'fr'
+              ? 'Baïla Généa vous donne les possibilités suivantes'
+              : 'Baïla Généa offers you the following possibilities'}
           </h2>
           <p className="text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto">
-            Généalogie, recherche de proches, compétences, musée familial et gestion des cérémonies — tout en un.
+            {lang === 'fr'
+              ? 'Généalogie, recherche de proches, compétences, musée familial et gestion des cérémonies — tout en un.'
+              : 'Genealogy, search for relatives, skills, family museum and management of ceremonies — all in one.'}
           </p>
         </div>
 

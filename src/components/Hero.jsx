@@ -1,6 +1,9 @@
 import SponsorCarousel from './SponsorCarousel'
+import { useLanguage } from '../LanguageContext'
 
 function Hero() {
+  const { lang } = useLanguage()
+
   return (
     <header className="relative min-h-[90vh] sm:min-h-screen flex flex-col overflow-hidden bg-gradient-to-b from-[#1A3B8A] to-[#3F72B5] text-white">
       {/* ========== Haut de bannière : Logo + Carousel sponsors (6 slides) ========== */}
@@ -44,7 +47,9 @@ function Hero() {
             Baïla Généa
           </h1>
           <p className="text-lg sm:text-xl text-blue-50/95 max-w-2xl mx-auto mb-8 sm:mb-10 animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:150ms]">
-            Baïla Généa est un outil qui vous permet de créer votre arbre généalogique.
+            {lang === 'fr'
+              ? 'Baïla Généa est un outil qui vous permet de créer votre arbre généalogique.'
+              : 'Baïla Généa is a tool that lets you create your family tree.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up opacity-0 [animation-fill-mode:forwards] [animation-delay:300ms]">
             <a
@@ -53,19 +58,19 @@ function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold bg-white text-[#1A3B8A] shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200"
             >
-              Accéder à l&apos;application
+              {lang === 'fr' ? "Accéder à l'application" : 'Open the app'}
             </a>
             <a
               href="#features"
               className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-200"
             >
-              En savoir plus
+              {lang === 'fr' ? 'En savoir plus' : 'Learn more'}
             </a>
             <a
               href="#cta"
               className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-200"
             >
-              Conditions d&apos;accès
+              {lang === 'fr' ? "Conditions d'accès" : 'Access conditions'}
             </a>
           </div>
         </div>

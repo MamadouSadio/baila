@@ -3,6 +3,7 @@
  * Clic sur une personne → affichage de ses infos (comme dans l'app).
  */
 import { useState } from 'react'
+import { useLanguage } from '../LanguageContext'
 
 const treeData = [
   { id: '1', name: 'Mamadou', sub: 'Nom Prénom', row: 0, col: 1, isRoot: true },
@@ -128,16 +129,20 @@ function TreeConnectors() {
 }
 
 function InfoPanel({ node, onClose }) {
+  const { lang } = useLanguage()
   if (!node) return null
 
   const infos = [
-    { label: 'Nom', value: '…' },
-    { label: 'Prénom', value: node.name },
-    { label: 'Date de naissance', value: '…' },
-    { label: 'Lieu', value: '…' },
-    { label: 'Lien de parenté', value: '…' },
-    { label: 'Profession / Compétence', value: '…' },
-    { label: 'Localité', value: '…' },
+    { label: lang === 'fr' ? 'Nom' : 'Last name', value: '…' },
+    { label: lang === 'fr' ? 'Prénom' : 'First name', value: node.name },
+    { label: lang === 'fr' ? 'Date de naissance' : 'Date of birth', value: '…' },
+    { label: lang === 'fr' ? 'Lieu' : 'Place', value: '…' },
+    { label: lang === 'fr' ? 'Lien de parenté' : 'Relationship', value: '…' },
+    {
+      label: lang === 'fr' ? 'Profession / Compétence' : 'Profession / Skill',
+      value: '…',
+    },
+    { label: lang === 'fr' ? 'Localité' : 'Location', value: '…' },
   ]
 
   return (
@@ -148,7 +153,8 @@ function InfoPanel({ node, onClose }) {
     >
       <div className="flex items-center justify-between gap-4 mb-4">
         <h3 className="font-display font-semibold text-lg text-slate-900">
-          Fiche de {node.name}
+          {lang === 'fr' ? 'Fiche de ' : 'Profile of '}
+          {node.name}
         </h3>
         <button
           type="button"
@@ -163,12 +169,16 @@ function InfoPanel({ node, onClose }) {
         </button>
       </div>
       <p className="text-sm text-slate-500 mb-4">
-        Dans Baïla Généa, un clic sur une personne affiche ses informations et le lien de parenté.
+        {lang === 'fr'
+          ? 'Dans Baïla Généa, un clic sur une personne affiche ses informations et le lien de parenté.'
+          : 'In Baïla Généa, clicking on a person displays their information and the relationship link.'}
       </p>
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
         <div className="flex flex-col items-center sm:items-start shrink-0">
           <PhotoPlaceholder size="lg" />
-          <span className="text-xs text-slate-400 mt-2">Photo du membre</span>
+          <span className="text-xs text-slate-400 mt-2">
+            {lang === 'fr' ? 'Photo du membre' : 'Member photo'}
+          </span>
         </div>
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm flex-1 min-w-0">
           {infos.map(({ label, value }) => (
@@ -187,6 +197,7 @@ const TREE_WIDTH = (CARD_WIDTH + COL_GAP) * (COLS - 1) + CARD_WIDTH
 const TREE_HEIGHT = (CARD_HEIGHT + ROW_GAP) * (ROWS - 1) + CARD_HEIGHT
 
 function ArbreGenealogique() {
+  const { lang } = useLanguage()
   const [selectedNode, setSelectedNode] = useState(null)
 
   return (
@@ -194,13 +205,17 @@ function ArbreGenealogique() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-slate-900 mb-3">
-            Exemple d&apos;arbre généalogique
+            {lang === 'fr' ? "Exemple d'arbre généalogique" : 'Example family tree'}
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Recherchez le lien de parenté entre deux membres quelconques de la famille.
+            {lang === 'fr'
+              ? 'Recherchez le lien de parenté entre deux membres quelconques de la famille.'
+              : 'Search for the relationship between any two members of the family.'}
           </p>
           <p className="text-slate-500 text-sm mt-2">
-            Cliquez sur une personne pour voir ses infos (exemple).
+            {lang === 'fr'
+              ? 'Cliquez sur une personne pour voir ses infos (exemple).'
+              : 'Click on a person to see their information (example).'}
           </p>
         </div>
 
@@ -242,7 +257,9 @@ function ArbreGenealogique() {
         </div>
 
         <p className="text-center text-sm text-slate-500 mt-8 max-w-xl mx-auto">
-          Dans Baïla Généa, vous créez votre arbre avec les noms de votre famille, visualisez les liens de parenté et consultez les informations de chaque personne.
+          {lang === 'fr'
+            ? 'Dans Baïla Généa, vous créez votre arbre avec les noms de votre famille, visualisez les liens de parenté et consultez les informations de chaque personne.'
+            : 'In Baïla Généa, you create your tree with the names of your family, view relationship links, and consult each person’s information.'}
         </p>
       </div>
     </section>

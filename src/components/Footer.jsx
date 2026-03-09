@@ -1,4 +1,7 @@
+import { useLanguage } from '../LanguageContext'
+
 function Footer({ onOpenCGU }) {
+  const { lang } = useLanguage()
   const year = new Date().getFullYear()
 
   return (
@@ -23,12 +26,20 @@ function Footer({ onOpenCGU }) {
               rel="noopener noreferrer"
               className="hover:text-white transition-colors font-medium"
             >
-              Accéder à l&apos;application
+              {lang === 'fr' ? "Accéder à l'application" : 'Open the app'}
             </a>
-            <a href="#features" className="hover:text-white transition-colors">Fonctionnalités</a>
-            <a href="#arbre" className="hover:text-white transition-colors">Arbre généalogique</a>
-            <a href="#testimonials" className="hover:text-white transition-colors">Témoignages</a>
-            <a href="#cta" className="hover:text-white transition-colors">Conditions d&apos;accès</a>
+            <a href="#features" className="hover:text-white transition-colors">
+              {lang === 'fr' ? 'Fonctionnalités' : 'Features'}
+            </a>
+            <a href="#arbre" className="hover:text-white transition-colors">
+              {lang === 'fr' ? 'Arbre généalogique' : 'Family tree'}
+            </a>
+            <a href="#testimonials" className="hover:text-white transition-colors">
+              {lang === 'fr' ? 'Témoignages' : 'Testimonials'}
+            </a>
+            <a href="#cta" className="hover:text-white transition-colors">
+              {lang === 'fr' ? "Conditions d'accès" : 'Access conditions'}
+            </a>
             {onOpenCGU ? (
               <button type="button" onClick={onOpenCGU} className="hover:text-white transition-colors bg-transparent border-none cursor-pointer text-sm font-normal text-inherit p-0">CGU</button>
             ) : (
