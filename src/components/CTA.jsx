@@ -65,9 +65,7 @@ function CTA() {
             </li>
             <li className="flex gap-3 text-slate-400 text-sm">
               <span className="shrink-0" aria-hidden>▸</span>
-              <span>
-                Le Cabinet Sahel Focus Management n&apos;est responsable en quoi que ce soit des données diffusées dans votre compte familial.
-              </span>
+              <span>Pour plus d&apos;informations nous vous invitons à consulter les CGU.</span>
             </li>
           </ul>
         ) : (
@@ -102,9 +100,7 @@ function CTA() {
             </li>
             <li className="flex gap-3 text-slate-400 text-sm">
               <span className="shrink-0" aria-hidden>▸</span>
-              <span>
-                Cabinet Sahel Focus Management is not responsible in any way for the data published in your family account.
-              </span>
+              <span>For more information, please consult the Terms of Use (CGU).</span>
             </li>
           </ul>
         )}
@@ -125,11 +121,37 @@ function CTA() {
             Nous contacter
           </a>
           <a
-            href="#"
+            href="#redevance"
             className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold border-2 border-white/60 text-white hover:bg-white/10 transition-colors"
           >
-            S&apos;inscrire / Payer la redevance
+            {lang === 'fr' ? "S'inscrire / Payer la redevance" : 'Register / Pay the fee'}
           </a>
+          <a
+            href="https://drive.google.com/file/d/1b2PVVqxdoSPvJCap8JAJdd76xjpV7st3/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold border-2 border-dashed border-white/50 text-white/90 hover:bg-white/10 hover:text-white transition-colors"
+          >
+            {lang === 'fr'
+              ? 'Télécharger le bulletin de souscription'
+              : 'Download the subscription form'}
+          </a>
+        </div>
+        <div id="redevance" className="mt-10 text-sm sm:text-base text-slate-200 leading-relaxed">
+          {lang === 'fr' ? (
+            <p>
+              Payement de la redevance annuelle de <strong>30&nbsp;000&nbsp;F&nbsp;CFA / 46&nbsp;€ / 55&nbsp;$</strong>{' '}
+              par Wave ou Orange Money au numéro <strong>00&nbsp;221&nbsp;77&nbsp;640&nbsp;32&nbsp;31</strong> au nom
+              de <strong>Moustapha Sall</strong>. Prière de mentionner votre identifiant pour l&apos;activation de votre
+              compte.
+            </p>
+          ) : (
+            <p>
+              Payment of the annual fee of <strong>30,000 CFA / 46&nbsp;€ / 55&nbsp;$</strong> via Wave or Orange Money
+              to the number <strong>00&nbsp;221&nbsp;77&nbsp;640&nbsp;32&nbsp;31</strong> in the name of{' '}
+              <strong>Moustapha Sall</strong>. Please include your identifier so that your account can be activated.
+            </p>
+          )}
         </div>
       </div>
     </section>
