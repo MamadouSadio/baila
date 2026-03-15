@@ -143,8 +143,8 @@ function CTA() {
             className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold border-2 border-dashed border-white/50 text-white/90 hover:bg-white/10 hover:text-white transition-colors"
           >
             {lang === 'fr'
-              ? 'Télécharger le bulletin de souscription'
-              : 'Download the subscription form'}
+              ? 'Télécharger le bulletin de sponsorisation'
+              : 'Download the sponsorship form'}
           </a>
         </div>
         <div
