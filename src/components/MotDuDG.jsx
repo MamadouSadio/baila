@@ -29,7 +29,7 @@ function MotDuDG() {
               />
             </div>
             <p className="text-center text-sm text-slate-600 mt-4 font-medium">
-              Mr Moustapha TALL
+              Mr Moustapha SALL
             </p>
           </div>
 

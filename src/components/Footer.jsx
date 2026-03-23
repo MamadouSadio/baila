@@ -12,7 +12,7 @@ function Footer({ onOpenCGU }) {
             République du Sénégal — Un Peuple - Un but - Une Foi
           </p>
           <p className="text-slate-500 text-sm mt-0.5">
-            Ministère.............
+            Ministère de la Culture, de l'Artisanat et du Tourisme
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-700/50">
