@@ -38,13 +38,13 @@ function MotDuDG() {
             {lang === 'fr' ? (
               <>
                 <p>
-                  En Afrique de l&apos;Ouest, face aux contraintes socio-économiques actuelles, la famille et la parentalité vivent un glissement vers un autre type de famille et de parentalité qu&apos;on pourrait appeler « famille nucléaire stricte ». La grande cour familiale a cédé la place à la « villa aux chambres restreintes ».
+                  En Afrique de l&apos;Ouest, face aux contraintes socio-économiques actuelles, la famille et la parenté vivent un glissement vers un autre type de famille et de parenté qu&apos;on pourrait appeler « famille nucléaire stricte ». La grande cour familiale a cédé la place à la « villa aux chambres restreintes ».
                 </p>
                 <p>
                   Cette mutation n&apos;a pas épargné le rôle du griot généalogiste qui, lors de ses visites inopinées ou lors des cérémonies familiales, nous retrace notre généalogie, dans un discours élogieux. Maître de la parole, fidèle gardien de la tradition orale, conservateur incontesté des us et coutumes ancestraux, le griot est devenu une espèce en voie de disparition dans la société africaine. De cette mutation que subit la famille africaine et de cette disparition qui menace les griots, les liens généalogiques, facteurs de régulation sociale, vont beaucoup en pâtir.
                 </p>
                 <p>
-                  Cependant, l&apos;avènement des technologies de l&apos;information et de la communication constitue un réel palliatif par rapport à ce fléau qui guette la parentalité. En effet, des applications comme WhatsApp, Telegram et autres ont beaucoup renforcé les échanges et discussions entre les membres de la famille à travers la création de groupes. Mais ces échanges, malgré leur intensité, n&apos;édifient pas les acteurs sur leurs réels liens de parenté.
+                  Cependant, l&apos;avènement des technologies de l&apos;information et de la communication constitue un réel palliatif par rapport à ce fléau qui guette la parenté. En effet, des applications comme WhatsApp, Telegram et autres ont beaucoup renforcé les échanges et discussions entre les membres de la famille à travers la création de groupes. Mais ces échanges, malgré leur intensité, n&apos;édifient pas les acteurs sur leurs réels liens de parenté.
                 </p>
                 <p className="font-semibold text-slate-900">
                   C&apos;est dans le but de pallier à ce manquement que le cabinet SAHFCOM a créé Baïla Généa.
@@ -62,13 +62,13 @@ function MotDuDG() {
             ) : (
               <>
                 <p>
-                  In West Africa, in the face of current socio‑economic constraints, the family and parenthood are shifting toward another type of family model that could be called a “strict nuclear family”. The large family courtyard has given way to the “house with restricted rooms”.
+                  In West Africa, in the face of current socio‑economic constraints, the family and kinship are shifting toward another type of family and kinship model that could be called a “strict nuclear family”. The large family courtyard has given way to the “house with restricted rooms”.
                 </p>
                 <p>
                   This transformation has not spared the role of the genealogical griot who, during unannounced visits or family ceremonies, used to recount our genealogy in an elogious speech. Master of the spoken word, faithful guardian of oral tradition, undisputed keeper of ancestral customs, the griot has become an endangered figure in African societies. As the African family changes and the griots disappear, genealogical ties – key factors of social regulation – are greatly weakened.
                 </p>
                 <p>
-                  However, the advent of information and communication technologies offers a real remedy to this threat hanging over parenthood. Applications such as WhatsApp, Telegram and others have greatly strengthened exchanges and discussions among family members through the creation of groups. But these exchanges, despite their intensity, do not really enlighten people about their true family relationships.
+                  However, the advent of information and communication technologies offers a real remedy to this threat hanging over kinship. Applications such as WhatsApp, Telegram and others have greatly strengthened exchanges and discussions among family members through the creation of groups. But these exchanges, despite their intensity, do not really enlighten people about their true family relationships.
                 </p>
                 <p className="font-semibold text-slate-900">
                   It is to address this shortcoming that Cabinet SAHFCOM created Baïla Généa.

@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { useLanguage } from '../LanguageContext'
 
 function CTA() {
   const { lang, setLang } = useLanguage()
-  const [focusRedevance, setFocusRedevance] = useState(false)
 
   return (
     <section id="cta" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
@@ -122,20 +120,6 @@ function CTA() {
           >
             Nous contacter
           </a>
-          <button
-            type="button"
-            onClick={() => {
-              const el = document.getElementById('redevance')
-              if (el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                setFocusRedevance(true)
-                window.setTimeout(() => setFocusRedevance(false), 3000)
-              }
-            }}
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold border-2 border-white/60 text-white hover:bg-white/10 transition-colors"
-          >
-            {lang === 'fr' ? "S'inscrire / Payer la redevance" : 'Register / Pay the fee'}
-          </button>
           <a
             href="https://drive.google.com/file/d/1b2PVVqxdoSPvJCap8JAJdd76xjpV7st3/view?usp=drivesdk"
             target="_blank"
@@ -146,27 +130,6 @@ function CTA() {
               ? 'Télécharger le bulletin de sponsorisation'
               : 'Download the sponsorship form'}
           </a>
-        </div>
-        <div
-          id="redevance"
-          className={`mt-10 text-sm sm:text-base text-slate-200 leading-relaxed scroll-mt-28 transition-colors duration-300 ${
-            focusRedevance ? 'bg-white/5 ring-2 ring-white/70 rounded-2xl p-4 -mx-1 sm:mx-0' : ''
-          }`}
-        >
-          {lang === 'fr' ? (
-            <p>
-              Payement de la redevance annuelle de <strong>30&nbsp;000&nbsp;F&nbsp;CFA / 46&nbsp;€ / 55&nbsp;$</strong>{' '}
-              par Wave ou Orange Money au numéro <strong>00&nbsp;221&nbsp;77&nbsp;640&nbsp;32&nbsp;31</strong> au nom
-              de <strong>Moustapha Sall</strong>. Prière de mentionner votre identifiant pour l&apos;activation de votre
-              compte.
-            </p>
-          ) : (
-            <p>
-              Payment of the annual fee of <strong>30,000 CFA / 46&nbsp;€ / 55&nbsp;$</strong> via Wave or Orange Money
-              to the number <strong>00&nbsp;221&nbsp;77&nbsp;640&nbsp;32&nbsp;31</strong> in the name of{' '}
-              <strong>Moustapha Sall</strong>. Please include your identifier so that your account can be activated.
-            </p>
-          )}
         </div>
       </div>
     </section>
